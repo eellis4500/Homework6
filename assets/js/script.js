@@ -65,34 +65,3 @@ $(search).on('click', function (event) {
         getWeather(citySearch)
     })
 })
-
-
-
-// $(city1).on('click', function (event) {
-//     var citySearch = $('#city1').val()
-//     cityStorage.push(citySearch)
-//     localStorage.setItem(cityName2, JSON.stringify(cityStorage))
-//     city1.textContent = cityStorage[cityStorage.length - 2]
-//     $.ajax({
-//         url: "https://api.openweathermap.org/data/2.5/weather?q=" + city1 + "&units=imperial&appid=8b5c3fac3318808254a932ee23387d1b",
-//         method: "GET"
-//     })
-//     .then(function (octopus) {
-//         icon.src = "https://openweathermap.org/img/wn/" + octopus.weather[0].icon + "@2x.png";
-//         cityName.textContent = octopus.name + " (" + new Date().toLocaleDateString() + ")";
-//         temperature.textContent = "Temperature: " + octopus.main.temp + "°F";
-//         humidity.textContent = "Humidity: " + octopus.main.humidity + "%";
-//         windSpeed.textContent = "Wind Speed: " + octopus.wind.speed + " MPH";
-//         var lat = octopus.coord.lat;
-//         var lon = octopus.coord.lon;
-
-//         $.ajax({
-//             url: "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely&appid=8b5c3fac3318808254a932ee23387d1b",
-//             method: "GET"
-//         })
-
-//             .then(function (spockopus) {
-//                 uvIndex.textContent = "UV Index: " + spockopus.current.uvi;
-//             })
-//     });
-// })
