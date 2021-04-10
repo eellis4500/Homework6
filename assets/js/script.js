@@ -44,9 +44,6 @@ function getWeather(location) {
 
 $(search).on('click', function (event) {
     var searchText = $('#searchText').val()
-    // if (cityStorage.length <= 0) {
-    //     cityStorage = []
-    // }
     cityStorage.push(searchText)
     localStorage.setItem(cityName2, JSON.stringify(cityStorage))
     city1.textContent = cityStorage[cityStorage.length - 2]
@@ -55,9 +52,7 @@ $(search).on('click', function (event) {
         
 })
     city1.textContent = cityStorage[cityStorage.length - 2]
-    console.log(JSON.parse(localStorage.getItem(cityName2)).length)
     $(city1).on('click', function (event) {
-        console.log("It's Working")
         var citySearch = $('#city1').text()
         cityStorage.push(citySearch)
         localStorage.setItem(cityName2, JSON.stringify(cityStorage))
