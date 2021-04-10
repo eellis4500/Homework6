@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
 var icon = document.getElementById("icon")
 var cityName = document.getElementById("cityName")
 var temperature = document.getElementById("temperature")
