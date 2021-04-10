@@ -10,7 +10,7 @@ var uvIndex = document.getElementById("uvIndex")
 var search = document.getElementById("search")
 var city1 = document.getElementById("city1")
 var cityName2 = "City Name"
-var cityStorage = JSON.parse(localStorage.getItem(cityName2))
+var cityStorage = JSON.parse(localStorage.getItem(cityName2)) || []
 
 function getWeather(location) {
     $.ajax({
@@ -44,9 +44,9 @@ function getWeather(location) {
 
 $(search).on('click', function (event) {
     var searchText = $('#searchText').val()
-    if (cityStorage.length <= 0) {
-        cityStorage = []
-    }
+    // if (cityStorage.length <= 0) {
+    //     cityStorage = []
+    // }
     cityStorage.push(searchText)
     localStorage.setItem(cityName2, JSON.stringify(cityStorage))
     city1.textContent = cityStorage[cityStorage.length - 2]
